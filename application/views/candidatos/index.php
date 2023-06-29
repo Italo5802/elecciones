@@ -53,7 +53,7 @@
                     <?php echo $filaTemporal->longitud_el; ?>
                   </td>
                   <td class="text-center">
-                    <a href="#" title="Editar empleado" style="color:green;">
+                    <a href="<?php echo site_url('/candidatos/editar/'); ?><?php echo $filaTemporal->id_el; ?>"  title="Editar candidato" style="color:green;">
                       <i class="glyphicon glyphicon-pencil"></i>
                     </a>
                     &nbsp;&nbsp;&nbsp;&nbsp;

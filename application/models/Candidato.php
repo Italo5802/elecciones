@@ -24,6 +24,20 @@
       }
 
     }
+    function obtenerPorId($id_el) {
+      $this->db->where("id_el", $id_el);
+      $producto = $this->db->get("candidato");
+      if ($producto->num_rows() > 0) {
+          return $producto->row();
+      } else { // no hay datos
+          return false;
+      }
+    }
+    // función para actualizar un instructor
+    function actualizar($id_el, $datos) {
+        $this->db->where("id_el", $id_el);
+        return $this->db->update('candidato', $datos);
+    }
     function borrar($id_el){
       $this->db->where("id_el",$id_el);
       if ($this->db->delete("candidato")) {
